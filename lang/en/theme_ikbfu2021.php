@@ -21,7 +21,7 @@ $string['brandcolor'] = 'Brand colour';
 // The brand colour setting description.
 $string['brandcolor_desc'] = 'The accent colour.';
 // A description shown in the admin theme selector.
-$string['choosereadme'] = 'Theme IKBFU2021 is a child theme of Boost. It adds the ability to upload background photos.';
+$string['choosereadme'] = 'Theme IKBFU2021 is a child theme of Boost.';
 // Name of the settings pages.
 $string['configtitle'] = 'IKBFU2021 settings';
 // Name of the first settings tab.
