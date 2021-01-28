@@ -9,7 +9,7 @@
 // This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
 
-function theme_photo_get_main_scss_content($theme) {
+function theme_ikbfu2021_get_main_scss_content($theme) {
     global $CFG;
 
     $scss = '';

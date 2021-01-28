@@ -19,13 +19,11 @@ $string['brandcolor'] = 'Brand colour';
 // The brand colour setting description.
 $string['brandcolor_desc'] = 'The accent colour.';
 // A description shown in the admin theme selector.
-$string['choosereadme'] = 'Theme photo is a child theme of Boost. It adds the ability to upload background photos.';
+$string['choosereadme'] = 'Theme IKBFU2021 is a child theme of Boost. It adds the ability to upload background photos.';
 // Name of the settings pages.
 $string['configtitle'] = 'Photo settings';
 // Name of the first settings tab.
 $string['generalsettings'] = 'General settings';
-// The name of our plugin.
-$string['pluginname'] = 'Photo';
 // Preset files setting.
 $string['presetfiles'] = 'Additional theme preset files';
 // Preset files help text.
