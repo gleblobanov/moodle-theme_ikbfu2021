@@ -63,7 +63,7 @@ if ($ADMIN->fulltree) {
 
     // Must add the page after definiting all the settings!
     $settings->add($page);
-/*
+
     // Advanced settings.
     $page = new admin_settingpage('theme_ikbfu2021_advanced', get_string('advancedsettings', 'theme_ikbfu2021'));
 
@@ -79,5 +79,5 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    $settings->add($page);*/
+    $settings->add($page);
 }
