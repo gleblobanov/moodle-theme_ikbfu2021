@@ -12,6 +12,8 @@ defined('MOODLE_INTERNAL') || die();
 $string['choosereadme'] = 'Immanuel Kant Baltic Federal University Theme';
 // The name of our plugin.
 $string['pluginname'] = 'IKBFU2021';
+// We need to include a lang string for each block region.
+$string['region-side-pre'] = 'Right';
 // The name of the second tab in the theme settings.
 $string['advancedsettings'] = 'Advanced settings';
 // The brand colour setting.
@@ -19,13 +21,11 @@ $string['brandcolor'] = 'Brand colour';
 // The brand colour setting description.
 $string['brandcolor_desc'] = 'The accent colour.';
 // A description shown in the admin theme selector.
-$string['choosereadme'] = 'Theme photo is a child theme of Boost. It adds the ability to upload background photos.';
+$string['choosereadme'] = 'Theme IKBFU2021 is a child theme of Boost.';
 // Name of the settings pages.
-$string['configtitle'] = 'Photo settings';
+$string['configtitle'] = 'IKBFU2021 settings';
 // Name of the first settings tab.
 $string['generalsettings'] = 'General settings';
-// The name of our plugin.
-$string['pluginname'] = 'Photo';
 // Preset files setting.
 $string['presetfiles'] = 'Additional theme preset files';
 // Preset files help text.
