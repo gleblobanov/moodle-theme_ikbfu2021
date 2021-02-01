@@ -47,7 +47,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_ikbfu2021/presetfiles';
     $title = get_string('presetfiles','theme_ikbfu2021');
     $description = get_string('presetfiles_desc', 'theme_ikbfu2021');
-
+    
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'preset', 0,
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));
     $page->add($setting);
@@ -63,7 +63,7 @@ if ($ADMIN->fulltree) {
 
     // Login page background setting.                                                                                               
     // We use variables for readability.                                                                                            
-    $name = 'theme_photo/loginbackgroundimage';                                                                                     
+    $name = 'theme_ikbfu2021/loginbackgroundimage';                                                                                     
     $title = get_string('loginbackgroundimage', 'theme_ikbfu2021');                                                                     
     $description = get_string('loginbackgroundimage_desc', 'theme_ikbfu2021');                                                          
     // This creates the new setting.                                                                                                
@@ -77,6 +77,7 @@ if ($ADMIN->fulltree) {
 
     
     // Must add the page after definiting all the settings!
+    
     $settings->add($page);
 
     // Advanced settings.
