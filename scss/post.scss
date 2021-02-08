@@ -2,3 +2,7 @@ body.pagelayout-login {
     background-image: url([[pix:theme_ikbfu2021|loginbackgroundimage]]);                                                                
     background-size: cover;                                                                                                         
 }
+
+[data-region="blocks-column"] {
+    float:none;
+}
