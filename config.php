@@ -58,4 +58,15 @@ $THEME->hidefromselector = false;
 // we want to allow presets uploaded to our own theme file area to be selected in the preset list.
 $THEME->scss = function($theme) {
     return theme_ikbfu2021_get_main_scss_content($theme);
+
+$THEME->layouts = [
+    // The site home page.
+    'frontpage' => array(
+        'file' => 'frontpage.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
+        'options' => array('nonavbar' => true),
+    )
+];
+
 };
