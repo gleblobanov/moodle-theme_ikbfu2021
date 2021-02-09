@@ -4,10 +4,12 @@ body .pagelayout-login {
     background-size: cover;                                                                                                         
 }
 
-/* Frontpage */
+/* All blocks position */
 [data-region="blocks-column"] {
     float: none;
 }
+
+/* Frontpage */
 .pagelayout-frontpage #region-main {
     display: none;
 }
@@ -22,3 +24,7 @@ body .pagelayout-login {
     margin-right: 1rem;
     min-width: 300px;
 }
+.pagelayout-frontpage [data-region="drawer-toggle"] {
+    display: none;
+}
+
