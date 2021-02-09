@@ -47,7 +47,9 @@
 
             <div id="page-content" class="row pb-3 d-print-block">
 		<div id="region-main-box" class="col-12">
-                    {{#hasregionmainsettingsmenu}}
+
+		    {{!--
+		      {{#hasregionmainsettingsmenu}}
 			<div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
 			    <div> {{{ output.region_main_settings_menu }}} </div>
 			</div>
@@ -63,6 +65,8 @@
 			{{{ output.course_content_footer }}}
 
                     </section>
+		    --}}
+		    
                     {{#hasblocks}}
 			<section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
 			    {{{ sidepreblocks }}}
