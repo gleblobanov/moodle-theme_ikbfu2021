@@ -1,12 +1,22 @@
-body.pagelayout-login {                                                                                                             
+/* Login page */
+body .pagelayout-login {                                                                                                             
     background-image: url([[pix:theme_ikbfu2021|loginbackgroundimage]]);                                                                
     background-size: cover;                                                                                                         
 }
 
+/* Frontpage */
 [data-region="blocks-column"] {
-    float:none;
+    float: none;
 }
-
 .pagelayout-frontpage #region-main {
-    display:none;
+    display: none;
+}
+.pagelayout-frontpage #block-region-side-pre {
+    display: flex;
+    flex-direction: row;
+}
+.pagelayout-frontpage .card {
+    border: 0px;
+    margin-right: 1rem;
+    min-width: 300px;
 }
