@@ -38,7 +38,6 @@ $templatecontext = [
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
-    'hascontent' => false
 ];
 
 $nav = $PAGE->flatnav;

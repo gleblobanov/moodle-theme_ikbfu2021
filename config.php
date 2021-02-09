@@ -54,19 +54,21 @@ $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 // This flag allows to select a theme.
 $THEME->hidefromselector = false;
 
-// This is the function that returns the SCSS source for the main file in our theme. We override the boost version because
-// we want to allow presets uploaded to our own theme file area to be selected in the preset list.
-$THEME->scss = function($theme) {
-    return theme_ikbfu2021_get_main_scss_content($theme);
-
 $THEME->layouts = [
     // The site home page.
     'frontpage' => array(
         'file' => 'frontpage.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
-        'options' => array('nonavbar' => true),
-    )
+        'options' => array(
+            'nonavbar' => true,
+        ),
+    ),
 ];
+
+// This is the function that returns the SCSS source for the main file in our theme. We override the boost version because
+// we want to allow presets uploaded to our own theme file area to be selected in the preset list.
+$THEME->scss = function($theme) {
+    return theme_ikbfu2021_get_main_scss_content($theme);
 
 };
