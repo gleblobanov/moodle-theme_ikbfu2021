@@ -8,13 +8,13 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = '2021012500';
+$plugin->version = 2021012500;
 
-$plugin->requires = '2020061500';
+$plugin->requires = 2020061500;
 
 $plugin->component = 'theme_ikbfu2021';
 
 $plugin->dependencies = [
-    'theme_boost' => '2020061500'
+    'theme_boost' => 2020061500
 ];
 
