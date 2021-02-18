@@ -28,12 +28,17 @@ body.pagelayout-login {
     display: none !important;
 }
 
-$dark_gray: #3d3d3d;
+$dark_gray: #4a4a4a ;
 
 [data-region="drawer"] {
     background-color: $dark_gray;
     position: absolute;
     height: auto;
+
+    .list-group-item {
+        background-color: $dark_gray;
+        color: #fff;
+    }
 }
 
 body {
@@ -41,7 +46,7 @@ body {
 }
 
 #page-my-index {
-    background-color: $veri_blue;
+    background-color: $dark_gray;
 }
 
 [data-region="grading-navigation-panel"] {
@@ -59,3 +64,4 @@ body {
 .card-body {
     background-color: #fff;
 }
+
