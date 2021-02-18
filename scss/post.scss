@@ -28,3 +28,34 @@ body.pagelayout-login {
     display: none !important;
 }
 
+$dark_gray: #3d3d3d;
+
+[data-region="drawer"] {
+    background-color: $dark_gray;
+    position: absolute;
+    height: auto;
+}
+
+body {
+    background-color: $dark_gray;
+}
+
+#page-my-index {
+    background-color: $veri_blue;
+}
+
+[data-region="grading-navigation-panel"] {
+    background-color: #ffffff;
+}
+
+[data-region="grade-actions-panel"] {
+    background-color: #ffffff;
+}
+
+#page-footer {
+    display: none;
+}
+
+.card-body {
+    background-color: #fff;
+}
