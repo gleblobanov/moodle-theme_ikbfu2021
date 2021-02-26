@@ -4,12 +4,14 @@ body.pagelayout-login {
     background-size: cover;                                                                                                         
 }
 
-/* All blocks position */
-[data-region="blocks-column"] {
-    float: none;
-}
 
 /* Frontpage */
+#page-site-index {
+    [data-region="drawer-toggle"] {
+        display: none;
+    }
+}
+
 .pagelayout-frontpage {
 
     #region-main {
