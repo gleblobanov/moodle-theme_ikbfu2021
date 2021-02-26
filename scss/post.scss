@@ -10,6 +10,10 @@ body.pagelayout-login {
     [data-region="drawer-toggle"] {
         display: none;
     }
+
+    [data-region="blocks-column"] {
+        float: none;
+    }
 }
 
 .pagelayout-frontpage {
