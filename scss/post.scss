@@ -8,7 +8,7 @@ body.pagelayout-login {
 /* Frontpage */
 #page-site-index {
     [data-region="drawer-toggle"] {
-        display: none;
+        display: none !important;
     }
 
     [data-region="blocks-column"] {
