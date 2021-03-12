@@ -66,11 +66,11 @@
         <div id="page-content" class="row pb-3 d-print-block">
             <div id="region-main-box" class="col-12">
                 {{#hasregionmainsettingsmenu}}
-                <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
+                <div id="region-main-settings-menu" class="d-print-none">
                     <div> {{{ output.region_main_settings_menu }}} </div>
                 </div>
                 {{/hasregionmainsettingsmenu}}
-                <section id="region-main" {{#hasblocks}}class="has-blocks mb-3"{{/hasblocks}} aria-label="{{#str}}content{{/str}}">
+                <section id="region-main" aria-label="{{#str}}content{{/str}}">
 
                     {{#hasregionmainsettingsmenu}}
                         <div class="region_main_settings_menu_proxy"></div>
@@ -83,16 +83,18 @@
                 </section>
                 
             </div>
-            {{#hassidepreblocks}}
-                <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
-                    {{{ sidepreblocks }}}
+            <div class="col-12">
+              {{#hassidepreblocks}}
+                <section data-region="blocks-column" class="d-print-none bottom-page-block" aria-label="{{#str}}blocks{{/str}}">
+                  {{{ sidepreblocks }}}
                 </section>
-                {{/hassidepreblocks}}
-            {{#hassidepostblocks}}
-                <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
-                    {{{ sidepostblocks }}}
+              {{/hassidepreblocks}}
+              {{#hassidepostblocks}}
+                <section data-region="blocks-column" class="d-print-none bottom-page-block" aria-label="{{#str}}blocks{{/str}}">
+                  {{{ sidepostblocks }}}
                 </section>
-            {{/hassidepostblocks}}
+              {{/hassidepostblocks}}
+            </div>
         </div>
     </div>
     {{{ output.standard_after_main_region_html }}}
