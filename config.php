@@ -64,6 +64,12 @@ $THEME->layouts = [
             'nonavbar' => true,
         ),
     ),
+    // Part of course, typical for modules - default page layout if $cm specified in require_login().
+    'incourse' => array(
+        'file' => 'incourse.php',
+        'regions' => array('side-pre', 'side-post'),
+        'defaultregion' => 'side-pre',
+    ),
 ];
 
 // This is the function that returns the SCSS source for the main file in our theme. We override the boost version because
