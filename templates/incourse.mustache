@@ -81,17 +81,18 @@
                     {{{ output.course_content_footer }}}
 
                 </section>
-                {{#hasblocks}}
+                
+            </div>
+            {{#hassidepreblocks}}
                 <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
                     {{{ sidepreblocks }}}
                 </section>
-                {{/hasblocks}}
-            </div>
-            {{#hasblocks}}
+                {{/hassidepreblocks}}
+            {{#hassidepostblocks}}
                 <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
                     {{{ sidepostblocks }}}
                 </section>
-            {{/hasblocks}}
+            {{/hassidepostblocks}}
         </div>
     </div>
     {{{ output.standard_after_main_region_html }}}

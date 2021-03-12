@@ -40,7 +40,8 @@ if ($navdraweropen) {
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $sidepreblocks = $OUTPUT->blocks('side-pre');
 $sidepostblocks = $OUTPUT->blocks('side-post');
-$hasblocks = strpos($blockshtml, 'data-block=') !== false;
+$hassideprebloks = strpos($sidepreblocks, 'data-block=') !== false;
+$hassidepostbloks = strpos($sidepostblocks, 'data-block=') !== false;
 $buildregionmainsettings = !$PAGE->include_region_main_settings_in_header_actions();
 // If the settings menu will be included in the header then don't add it here.
 $regionmainsettingsmenu = $buildregionmainsettings ? $OUTPUT->region_main_settings_menu() : false;
@@ -49,7 +50,8 @@ $templatecontext = [
     'output' => $OUTPUT,
     'sidepreblocks' => $sidepreblocks,
     'sidepostblocks' => $sidepostblocks,    
-    'hasblocks' => $hasblocks,
+    'hassidepreblocks' => $hassideprebloks,    
+    'hassidepostblocks' => $hassidepostbloks,
     'bodyattributes' => $bodyattributes,
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
