@@ -83,18 +83,18 @@
                 </section>
                 
             </div>
-            <div class="col-12">
+
               {{#hassidepreblocks}}
-                <section data-region="blocks-column" class="d-print-none bottom-page-block" aria-label="{{#str}}blocks{{/str}}">
+                <section data-region="blocks-column" class="col-12 d-print-none bottom-page-block" aria-label="{{#str}}blocks{{/str}}">
                   {{{ sidepreblocks }}}
                 </section>
               {{/hassidepreblocks}}
               {{#hassidepostblocks}}
-                <section data-region="blocks-column" class="d-print-none bottom-page-block" aria-label="{{#str}}blocks{{/str}}">
+                <section data-region="blocks-column" class="col-12 d-print-none bottom-page-block" aria-label="{{#str}}blocks{{/str}}">
                   {{{ sidepostblocks }}}
                 </section>
               {{/hassidepostblocks}}
-            </div>
+
         </div>
     </div>
     {{{ output.standard_after_main_region_html }}}
