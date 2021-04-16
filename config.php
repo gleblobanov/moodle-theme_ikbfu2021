@@ -78,3 +78,6 @@ $THEME->scss = function($theme) {
     return theme_ikbfu2021_get_main_scss_content($theme);
 
 };
+
+
+$THEME->rendererfactory = 'theme_overridden_renderer_factory';
