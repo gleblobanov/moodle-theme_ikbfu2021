@@ -135,12 +135,17 @@ class course_renderer extends \core_course_renderer {
         $content = '';
         if ($course->has_course_contacts()) {
             $content .= html_writer::start_tag('ul', ['class' => 'ikbfu2021-teachers']);
+            $count = 0;
             foreach ($course->get_course_contacts() as $coursecontact) {
+                if ($count > 1) {
+                    break;
+                }
                 $name =
                     html_writer::link(new \moodle_url('/user/view.php',
                         ['id' => $coursecontact['user']->id, 'course' => SITEID]),
                         $coursecontact['username']);
                 $content .= html_writer::tag('li', $name);
+                $count++;
             }
             $content .= html_writer::end_tag('ul');
         }
