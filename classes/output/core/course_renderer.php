@@ -25,6 +25,7 @@ namespace theme_ikbfu2021\output\core;
 defined('MOODLE_INTERNAL') || die();
 
 use \html_writer;
+use \moodle_url;
  
 class course_renderer extends \core_course_renderer {
     /**
@@ -55,6 +56,10 @@ class course_renderer extends \core_course_renderer {
             $classes .= ' collapsed';
         }
 
+        $course_rating = self::get_course_rating($course->id);
+
+
+
         // .coursebox
         $content .= html_writer::start_tag('div', array(
             'class' => $classes,
@@ -71,11 +76,22 @@ class course_renderer extends \core_course_renderer {
                     $content .= $this->course_contacts($course);
                 $content .= html_writer::end_tag('div'); 
                 $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
-                    $content .= html_writer::tag('span', '&#9733; 4.9', ['class' => 'ikbfu2021-course-card-footer']);
+                    $content .= html_writer::tag('span', '&#9733; ' . $course_rating, ['class' => 'ikbfu2021-course-card-footer']);
                 $content .= html_writer::end_tag('div');               
             $content .= html_writer::end_tag('div');
         $content .= html_writer::end_tag('div'); // .coursebox
         return $content;
+    }
+
+    private static function get_course_rating(string $course_id) : int {
+        global $DB;
+        $raitings = $DB->get_records('block_rate_course', ['course' => $course_id], 'raiting');
+
+        $raiting_count = count($raitings);
+        $raiting_sum   = array_reduce($raitings, function($carry, $item) {return $carry + $item->raiting;}, 0);
+        $raiting       = $raiting_sum / $raiting_count;
+
+        return $raiting;
     }
 
     /**

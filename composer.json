@@ -1,0 +1,29 @@
+{
+    "name": "ikbfu/ikbfu2021",
+    "type": "moodle-theme",
+    "version": "0.0.1-dev",
+    "description": "IKBFU theme for Moodle.",
+    "scripts": {
+        "lint": "phplint ./ --exclude=vendor",
+        "sniff": "phpcs -p . --ignore=vendor,config-dist.php,config.php --standard=vendor/blackboard-open-source/moodle-coding-standard/moodle",
+        "secure": "security-checker security:check composer.lock",
+        "test": "phpunit --bootstrap vendor/autoload.php --testdox --colors=always --whitelist lib --coverage-text",
+        "all": [
+            "@composer lint",
+            "@composer sniff",
+            "@composer test",
+            "@composer secure"
+        ]
+    },
+    "require": {
+        "composer/installers": "~1.0",
+        "symfony/http-client": "^5.2"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "overtrue/phplint": "^2.0",
+        "phpunit/phpunit": "^8.5",
+        "blackboard-open-source/moodle-coding-standard": "^2.0",
+        "moodle/moodle": "v3.9.0"
+    }
+}
