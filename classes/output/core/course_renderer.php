@@ -75,11 +75,13 @@ class course_renderer extends \core_course_renderer {
                 $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
                     $content .= self::get_course_authors($course->id);
                 $content .= html_writer::end_tag('div');
+                
+                $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
                 if ($course_rating != 0) {
-                    $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
-                        $content .= html_writer::tag('span', '&#9733; ' . number_format($course_rating, 2), ['class' => 'ikbfu2021-course-card-footer']);
-                    $content .= html_writer::end_tag('div');               
-                } 
+                    $content .= html_writer::tag('span', '&#9733; ' . number_format($course_rating, 2), ['class' => 'ikbfu2021-course-card-footer']);
+                }
+                $content .= html_writer::end_tag('div');               
+                
             $content .= html_writer::end_tag('div');
         $content .= html_writer::end_tag('div'); // .coursebox
         return $content;
