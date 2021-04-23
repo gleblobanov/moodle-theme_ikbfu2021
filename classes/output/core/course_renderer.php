@@ -85,7 +85,7 @@ class course_renderer extends \core_course_renderer {
 
     private static function get_course_rating(string $course_id) : int {
         global $DB;
-        $raitings = $DB->get_records('block_rate_course', ['course' => $course_id], 'raiting');
+        $raitings = $DB->get_records('block_rate_course', ['course' => $course_id], 'rating');
 
         $raiting_count = count($raitings);
         $raiting_sum   = array_reduce($raitings, function($carry, $item) {return $carry + $item->raiting;}, 0);
