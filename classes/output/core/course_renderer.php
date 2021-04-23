@@ -73,7 +73,7 @@ class course_renderer extends \core_course_renderer {
                     $content .= $this->course_overview_files($course);
                 $content .= html_writer::end_tag('div');
                 $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
-                    $content .= $this->course_contacts($course);
+                    $content .= self::get_course_authors($course->id);
                 $content .= html_writer::end_tag('div');
                 if ($course_rating != 0) {
                     $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
@@ -100,6 +100,20 @@ class course_renderer extends \core_course_renderer {
 
         return $rating;
     }
+
+    private static function get_course_authors(string $course_id) : string {
+        global $DB;
+        $field_id = $DB->get_records('customfield_field', ['shortname' => 'authors'], '', 'id');
+        $authors_records = $DB->get_records('customfield_course', ['instanceid' => $course_id, 'fieldid' => $field_id]);
+        if (empty($authors_records)) {
+            $default_authors = get_string('default_authors', 'theme_ikbfu2021');
+            return "БФУ им. И. Канта";
+        } else {
+            $authors = current($authors_records);
+            return $authors->value;
+        }
+    }
+    
 
     /**
      * Returns HTML to display a tree of subcategories and courses in the given category

@@ -10,3 +10,4 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['choosereadme'] = 'Тема Балтийского федерального университета им. И. Канта.';
 $string['pluginname'] = 'IKBFU2021';
+$string['default_authors'] = 'БФУ им. И. Канта';
