@@ -138,6 +138,14 @@ body {
                 -webkit-box-shadow: 2px 2px 9px 3px rgba(0,0,0,0.2); 
                 box-shadow: 2px 2px 9px 3px rgba(0,0,0,0.2);
 
+                .even {
+                    background-color: #fff;
+                }
+
+                .odd {
+                    background-color: #fff;
+                }
+
                 .ikbfu2021-info {
 
                     flex-direction: column;
@@ -156,7 +164,7 @@ body {
 
                             }
                             a:hover {
-                                coloer: #000;
+                                color: #000;
                                 text-decoration: none;
                             }
                         }
