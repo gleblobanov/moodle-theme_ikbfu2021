@@ -87,7 +87,7 @@ class course_renderer extends \core_course_renderer {
 
     private static function get_course_rating(string $course_id) : float {
         global $DB;
-        $ratings = $DB->get_records('block_rate_course', ['course' => $course_id], '', 'rating');
+        $ratings = $DB->get_records('block_rate_course', ['course' => $course_id], '', 'id, rating');
 
         $rating_count = count($ratings);
 
