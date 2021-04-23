@@ -104,7 +104,7 @@ class course_renderer extends \core_course_renderer {
     private static function get_course_authors(string $course_id) : string {
         global $DB;
         $field_id = $DB->get_records('customfield_field', ['shortname' => 'authors'], '', 'id');
-        $authors_records = $DB->get_records('customfield_course', ['instanceid' => $course_id, 'fieldid' => $field_id]);
+        $authors_records = $DB->get_records('customfield_data', ['instanceid' => $course_id, 'fieldid' => $field_id]);
         if (empty($authors_records)) {
             $default_authors = get_string('default_authors', 'theme_ikbfu2021');
             return "БФУ им. И. Канта";

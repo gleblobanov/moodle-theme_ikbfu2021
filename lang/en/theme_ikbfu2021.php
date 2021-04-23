@@ -48,3 +48,4 @@ $string['region-side-pre'] = 'Right';
 $string['loginbackgroundimage'] = 'Login page background image';                                                                    
 // Background image for login page.                                                                                                 
 $string['loginbackgroundimage_desc'] = 'An image that will be stretched to fill the background of the login page.';
+$string['default_authors'] = 'БФУ им. И. Канта';
