@@ -56,14 +56,14 @@ $THEME->hidefromselector = false;
 
 $THEME->layouts = [
     // The site home page.
-    'frontpage' => array(
-        'file' => 'frontpage.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
-        'options' => array(
-            'nonavbar' => true,
-        ),
-    ),
+   // 'frontpage' => array(
+   //     'file' => 'frontpage.php',
+   //     'regions' => array('side-pre'),
+   //     'defaultregion' => 'side-pre',
+   //     'options' => array(
+   //         'nonavbar' => true,
+   //     ),
+  //  ),
     // Part of course, typical for modules - default page layout if $cm specified in require_login().
         'incourse' => array(
         'file' => 'incourse.php',
