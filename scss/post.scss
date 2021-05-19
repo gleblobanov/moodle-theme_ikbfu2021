@@ -116,6 +116,22 @@ body {
     border: 0;
 }
 
+// Enrolment options page
+
+.generalbox {
+    .courseimage {
+
+        width: auto !important;
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 5%;
+            object-fit: cover;
+        }
+    }
+}
+
 // Category list of courses
 
 .ikbfu2021-course_category_tree {
