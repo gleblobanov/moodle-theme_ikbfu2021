@@ -46,6 +46,6 @@ $nav = $PAGE->flatnav;
 $templatecontext['flatnavigation'] = $nav;
 $templatecontext['firstcollectionlabel'] = $nav->get_collectionlabel();
 
-echo $OUTPUT->render_from_template('theme_boost/frontpage', $templatecontext);
+echo $OUTPUT->render_from_template('theme_ikbfu2021/frontpage', $templatecontext);
 
 

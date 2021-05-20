@@ -30,7 +30,7 @@ body.pagelayout-login {
     }
 
     .card {
-        border: 0px;
+        border: 0;
     }
 
     .block {
@@ -45,13 +45,20 @@ $dark_gray: #4a4a4a ;
 [data-region="drawer"] {
     background-color: $dark_gray;
     position: absolute;
-    height: auto;
+
 
     .list-group-item {
         background-color: $dark_gray;
         color: #fff;
         border: 0;
     }
+
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+[data-region="drawer"]::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
 }
 
 body {
