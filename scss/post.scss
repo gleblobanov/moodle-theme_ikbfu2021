@@ -281,10 +281,17 @@ body {
   align-items: flex-end;
 }
 
-.generalsecactivities {
+.general-section-card-details .generalsecactivities {
   margin: 5px !important;
 }
 
 .generalsecactivitiescontent {
   padding: 5px !important;
+}
+
+.general-section-card-details .generalsecactivities>div:first-child {
+  padding-top: 12px !important;
+  padding-left: 12px !important;
+  padding-bottom: 0 !important;
+  padding-right: 0 !important;
 }
