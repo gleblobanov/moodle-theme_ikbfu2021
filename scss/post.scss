@@ -297,5 +297,12 @@ body {
 }
 
 .general-section-card-details .coursemainimage {
-  object-fit: scale-down;
+  height: 200px;
+  width: 200px;
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+.general-section-card-details .coursemainimagediv, .general-section-card-details .coursemainimage {
+  height: auto;
 }
