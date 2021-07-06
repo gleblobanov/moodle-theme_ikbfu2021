@@ -17,6 +17,11 @@ body.pagelayout-login {
 }
 
 .pagelayout-frontpage {
+
+  [data-region="blocks-column"] {
+    width: auto;
+  }
+
   #region-main {
     display: none;
   }
@@ -24,6 +29,7 @@ body.pagelayout-login {
   #block-region-side-pre {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .card {
@@ -32,7 +38,7 @@ body.pagelayout-login {
 
   .block {
     margin-right: 1rem;
-    min-width: 300px;
+    width: 400px;
   }
 }
 
