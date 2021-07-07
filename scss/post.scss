@@ -18,6 +18,10 @@ body.pagelayout-login {
 
 .pagelayout-frontpage {
 
+  .page-header-headings {
+    display: none;
+  }
+
   [data-region="blocks-column"] {
     width: 100%;
     height: 100%;
