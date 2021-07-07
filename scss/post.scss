@@ -7,9 +7,6 @@ body.pagelayout-login {
 
 /* Frontpage */
 #page-site-index {
-  [data-region="drawer-toggle"] {
-    display: none !important;
-  }
 
   [data-region="blocks-column"] {
     float: none;
@@ -18,9 +15,6 @@ body.pagelayout-login {
 
 .pagelayout-frontpage {
 
-  .page-header-headings {
-    display: none;
-  }
 
   [data-region="blocks-column"] {
     width: 100%;
@@ -48,6 +42,7 @@ body.pagelayout-login {
   .block {
     margin-right: 1rem;
     width: 400px;
+    height: 250px;
   }
 
   h1 {
