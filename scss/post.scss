@@ -44,6 +44,77 @@ body.pagelayout-login {
   h1 {
     font-size: 2rem;
   }
+
+  .frontpage-big_button
+  {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+
+  .layer {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+  }
+
+  .layer:hover
+  {
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .frontpage-big_button > div > a
+  {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding-top:20%;
+  }
+
+  .frontpage-big_button > div > a > h1
+  {
+    color: white;
+  }
+
+  .frontpage-big_button > div > a:focus
+  {
+    background-color: rgba(0,0,0,0);
+  }
+
+  .frontpage-big_button-all_courses
+  {
+    background-image: url(https://lms-3.kantiana.ru/pix/fp/all_courses.jpg);
+  }
+
+  .frontpage-big_button-mooc
+  {
+    background-image: url(https://lms-3.kantiana.ru/pix/fp/mooc.jpg);
+  }
+
+  .frontpage-big_button-notifications
+  {
+    background-image: url(https://lms-3.kantiana.ru/pix/fp/notifications.jpg);
+  }
+
+  .frontpage-big_button-teachers
+  {
+    background-image: url(https://lms-3.kantiana.ru/pix/fp/teachers.jpg);
+  }
+
+  .frontpage-big_button-students
+  {
+    background-image: url(https://lms-3.kantiana.ru/pix/fp/students.jpg);
+  }
+
+  .frontpage-big_button-question
+  {
+    background-image: url(https://lms-3.kantiana.ru/pix/fp/question.jpg);
+  }
+
+
 }
 
 
