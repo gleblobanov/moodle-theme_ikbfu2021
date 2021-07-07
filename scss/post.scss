@@ -19,7 +19,12 @@ body.pagelayout-login {
 .pagelayout-frontpage {
 
   [data-region="blocks-column"] {
-    width: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .pagelayout-frontpage #block-region-side-pre {
+    height: 100%;
   }
 
   #region-main {
