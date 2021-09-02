@@ -34,6 +34,7 @@ body.pagelayout-login {
 
   .card {
     border: 0;
+    flex: 0 1 32%;
   }
 
   .block {
@@ -135,6 +136,8 @@ body.pagelayout-login {
 
   .card-text {
     height: 100% !important;
+    width: 400px;
+    height: 250px;
   }
 
   .no-overflow {
