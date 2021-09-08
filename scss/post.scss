@@ -34,12 +34,12 @@ body.pagelayout-login {
 
   .card {
     border: 0;
+    flex: 1 0 32%;
+    overflow: hidden;
   }
 
   .block {
     margin-right: 1rem;
-    width: 400px;
-    height: 250px;
   }
 
   h1 {
@@ -134,7 +134,9 @@ body.pagelayout-login {
   }
 
   .card-text {
-    height: 100% !important;
+    /*height: 100% !important;*/
+    width: 400px;
+    height: 250px;
   }
 
   .no-overflow {
