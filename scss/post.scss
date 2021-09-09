@@ -36,10 +36,11 @@ body.pagelayout-login {
     border: 0;
     flex: 1 0 32%;
     overflow: hidden;
+    min-width: 300px !important;
   }
 
   .block {
-    margin-right: 1rem;
+    margin-right: 1rem;   
   }
 
   h1 {
@@ -90,7 +91,8 @@ body.pagelayout-login {
     display: block;
     height: 100%;
     width: 100%;
-    padding-top:20%;
+    padding-top: 20%;
+    padding-bottom: 10%;
   }
 
   .frontpage-big_button > div > a > h1
@@ -134,9 +136,8 @@ body.pagelayout-login {
   }
 
   .card-text {
-    /*height: 100% !important;*/
-    width: 400px;
-    height: 250px;
+    height: 100% !important;
+    width: 100%;
   }
 
   .no-overflow {
