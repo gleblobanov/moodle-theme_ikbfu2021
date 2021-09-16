@@ -43,10 +43,24 @@ body.pagelayout-login {
     margin-right: 1rem;   
   }
 
-  h1 {
-    font-size: 2rem;
+  @media only screen and (max-width: 575px) {
+    h1 {
+      font-size: calc(1.044375rem + 1.7325vw);
+    }
   }
-
+  
+  @media only screen and (min-width: 576px) and (max-width: 1399px){
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media only screen and (min-width: 1400px){
+    h1 {
+      font-size: 2.34375rem;
+    }
+  }
+  
   .frontpage-big_button
   {
     width: 100%;
@@ -233,7 +247,7 @@ body {
 
 .generalbox {
   .coursebox {
-    min-width: 450px;
+    min-width: 250px;
     width: 450px;
     height: 200px;
     margin: 10px;
@@ -306,7 +320,7 @@ body {
       justify-content: unset;
 
       .coursebox {
-        min-width: 450px;
+        min-width: 250px;
         width: 450px;
         height: 200px;
         margin: 10px;
