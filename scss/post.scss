@@ -417,8 +417,6 @@ body {
   padding-right: 0 !important;
 }
 
-
-
 .general-section-card-details .coursemainimagediv, .general-section-card-details .coursemainimage {
   height: auto;
 }
@@ -429,4 +427,9 @@ body {
 
 [data-region="activity-information"] {
   margin-top: 10px;
+}
+
+.custom-select .singleselect {
+  margin-left: 0!important;
+  margin-top: 1rem;         
 }
