@@ -43,19 +43,19 @@ body.pagelayout-login {
     margin-right: 1rem;   
   }
 
-  @media only screen and (max-width: 575px) {
+  @media only screen and (max-width: 731px) {
     h1 {
       font-size: calc(1.044375rem + 1.7325vw);
     }
   }
   
-  @media only screen and (min-width: 576px) and (max-width: 1399px){
+  @media only screen and (min-width: 732px) and (max-width: 1599px){
     h1 {
       font-size: 2rem;
     }
   }
   
-  @media only screen and (min-width: 1400px){
+  @media only screen and (min-width: 1600px){
     h1 {
       font-size: 2.34375rem;
     }
