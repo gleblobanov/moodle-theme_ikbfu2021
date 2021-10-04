@@ -66,23 +66,44 @@ class course_renderer extends \core_course_renderer {
             'data-courseid' => $course->id,
             'data-type' => self::COURSECAT_TYPE_COURSE,
         ));
+        $coursename = $chelper->get_course_formatted_name($course);
+        $courselink = new moodle_url('/course/view.php', ['id' => $course->id]);
+        
+            $content .= html_writer::start_tag('a', array('href' => $courselink));
 
-            $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-info'));
-                $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
-                    $content .= $this->course_name($chelper, $course);
-                    $content .= $this->course_overview_files($course);
+                $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-info'));
+                    $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
+                        //$content .= $this->course_name($chelper, $course);
+                        $content .= html_writer::tag('h3', $coursename, array('class' => 'coursename'));
+
+                        $content .= html_writer::start_tag('div', ['class' => 'moreinfo']);
+                        if ($chelper->get_show_courses() < self::COURSECAT_SHOW_COURSES_EXPANDED) {
+                            if ($course->has_summary() || $course->has_course_contacts() || $course->has_course_overviewfiles()
+                                || $course->has_custom_fields()) {
+                                $url = new moodle_url('/course/info.php', ['id' => $course->id]);
+                                $image = $this->output->pix_icon('i/info', $this->strings->summary);
+                                $content .= html_writer::link($url, $image, ['title' => $this->strings->summary]);
+                                // Make sure JS file to expand course content is included.
+                                $this->coursecat_include_js();
+                            }
+                        }
+                        $content .= html_writer::end_tag('div');
+
+                        $content .= $this->course_overview_files($course);
+                    $content .= html_writer::end_tag('div');
+                    $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
+                        $content .= self::get_course_authors($course->id);
+                    $content .= html_writer::end_tag('div');
+                    
+                    $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
+                    if ($course_rating != 0) {
+                        $content .= html_writer::tag('span', '&#9733; ' . number_format($course_rating, 2), ['class' => 'ikbfu2021-course-card-footer']);
+                    }
+                    $content .= html_writer::end_tag('div');               
+                    
                 $content .= html_writer::end_tag('div');
-                $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
-                    $content .= self::get_course_authors($course->id);
-                $content .= html_writer::end_tag('div');
-                
-                $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
-                if ($course_rating != 0) {
-                    $content .= html_writer::tag('span', '&#9733; ' . number_format($course_rating, 2), ['class' => 'ikbfu2021-course-card-footer']);
-                }
-                $content .= html_writer::end_tag('div');               
-                
-            $content .= html_writer::end_tag('div');
+
+            $content .= html_writer::end_tag('a');
         $content .= html_writer::end_tag('div'); // .coursebox
         return $content;
     }

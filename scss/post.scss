@@ -35,7 +35,6 @@ body.pagelayout-login {
   .card {
     border: 0;
     flex: 1 0 32%;
-    overflow: hidden;
     min-width: 300px !important;
   }
 
@@ -328,6 +327,18 @@ body {
         box-shadow: 2px 2px 9px 3px rgba(0, 0, 0, 0.2);
         background-color: #fff !important;
 
+        a {
+          color: #000;
+          font-weight: 300;
+          font-weight: large !important;
+        }
+
+        a:hover {
+          color: #000;
+          text-decoration: none;
+        }
+
+
         .ikbfu2021-info {
           flex-direction: column;
           display: flex;
@@ -339,15 +350,10 @@ body {
             justify-content: space-between;
 
             .coursename {
-              a {
+              h3 {
                 color: #000;
                 font-weight: 300;
                 font-weight: large !important;
-              }
-
-              a:hover {
-                color: #000;
-                text-decoration: none;
               }
             }
 
@@ -378,6 +384,10 @@ body {
               list-style: none;
             }
           }
+        }
+        .ikbfu2021-info:hover {
+          background-color: rgba(150, 150, 150, 0.2);
+          text-decoration: none !important;
         }
       }
     }
@@ -429,7 +439,7 @@ body {
   margin-top: 10px;
 }
 
-.custom-select .singleselect {
+.custom-select {
   margin-left: 0!important;
   margin-top: 1rem;         
 }
