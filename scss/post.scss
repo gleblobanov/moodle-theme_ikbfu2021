@@ -310,7 +310,25 @@ body {
 
 // Category list of courses
 
-.ikbfu2021-course_category_tree {
+.course_category_tree {
+
+  .category.with_children > .info > .categoryname {
+    background-image: none;
+  }
+
+  .category.with_children.collapsed > .info > .categoryname {
+    background-image: none;
+    cursor: initial;
+  }
+
+  .category > .info > .categoryname {
+    background-image: none;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin-bottom: .5rem;
+    background-position: center left;
+}
+
   .content {
     .courses {
       display: flex;

@@ -156,7 +156,7 @@ class course_renderer extends \core_course_renderer {
 
         // Start content generation
         $content = '';
-        $attributes = $chelper->get_and_erase_attributes('ikbfu2021-course_category_tree clearfix');
+        $attributes = $chelper->get_and_erase_attributes('course_category_tree clearfix');
         $content .= html_writer::start_tag('div', $attributes);
 
         if ($coursecat->get_children_count()) {
@@ -366,5 +366,4 @@ class course_renderer extends \core_course_renderer {
       
         return $pagingbar;
     }
-   
 }
