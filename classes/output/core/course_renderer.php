@@ -67,6 +67,16 @@ class course_renderer extends \core_course_renderer {
             'data-type' => self::COURSECAT_TYPE_COURSE,
         ));
         $coursename = $chelper->get_course_formatted_name($course);
+        
+        // Сheck if the length of the course name exceeds $count
+        // If it exceeds limit the number of characters by $count and add $append
+        $count = 100;
+        $append = '...';
+        if (mb_strlen($coursename) > $count) {
+            $coursename = mb_substr($coursename,0,$count);
+            $coursename .= $append;
+        }
+        
         $courselink = new moodle_url('/course/view.php', ['id' => $course->id]);
         
             $content .= html_writer::start_tag('a', array('href' => $courselink));
@@ -156,7 +166,7 @@ class course_renderer extends \core_course_renderer {
 
         // Start content generation
         $content = '';
-        $attributes = $chelper->get_and_erase_attributes('ikbfu2021-course_category_tree clearfix');
+        $attributes = $chelper->get_and_erase_attributes('course_category_tree clearfix');
         $content .= html_writer::start_tag('div', $attributes);
 
         if ($coursecat->get_children_count()) {
@@ -366,5 +376,4 @@ class course_renderer extends \core_course_renderer {
       
         return $pagingbar;
     }
-   
 }
