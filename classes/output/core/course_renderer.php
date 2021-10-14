@@ -70,7 +70,7 @@ class course_renderer extends \core_course_renderer {
         
         // Сheck if the length of the course name exceeds $count
         // If it exceeds limit the number of characters by $count and add $append
-        $count = 100;
+        $count = 80;
         $append = '...';
         if (mb_strlen($coursename) > $count) {
             $coursename = mb_substr($coursename,0,$count);
