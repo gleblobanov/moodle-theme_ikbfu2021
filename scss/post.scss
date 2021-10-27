@@ -68,6 +68,7 @@ body.pagelayout-login {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    border-radius: 15px;
   }
 
   .frontpage-big_button:hover {
@@ -91,6 +92,7 @@ body.pagelayout-login {
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
+    border-radius: 15px;
   }
 
   .layer:hover
@@ -250,9 +252,10 @@ body {
     width: 450px;
     height: 200px;
     margin: 10px;
-    -webkit-box-shadow: 2px 2px 9px 3px rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 2px 9px 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.1);
     background-color: #fff !important;
+    border-radius: 15px;
 
     .ikbfu2021-info {
       flex-direction: column;
@@ -306,6 +309,9 @@ body {
       }
     }
   }
+  .coursebox:hover {
+    box-shadow: 0px 0px 10px 3px rgba(15, 110, 254, 0.5);
+  }
 }
 
 // Category list of courses
@@ -341,9 +347,10 @@ body {
         width: 450px;
         height: 200px;
         margin: 10px;
-        -webkit-box-shadow: 2px 2px 9px 3px rgba(0, 0, 0, 0.2);
-        box-shadow: 2px 2px 9px 3px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
         background-color: #fff !important;
+        border-radius: 15px;
 
         a {
           color: #000;
@@ -405,7 +412,7 @@ body {
         }
       }
       .coursebox:hover {
-        box-shadow: 2px 2px 9px 3px rgba(15, 110, 254, 0.75);
+        box-shadow: 0px 0px 10px 3px rgba(15, 110, 254, 0.5);
       }
     }
   }
