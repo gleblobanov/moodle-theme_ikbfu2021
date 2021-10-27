@@ -247,6 +247,11 @@ body {
 // Enrolment options page
 
 .generalbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: unset;
+  
   .coursebox {
     min-width: 250px;
     width: 450px;
