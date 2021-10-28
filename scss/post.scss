@@ -244,9 +244,22 @@ body {
   border: 0;
 }
 
+.single-card {
+  border-radius: 15px;
+}
+
+.wdmoverlay {
+  border-radius: 15px;
+}
+
 // Enrolment options page
 
 .generalbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: unset;
+  
   .coursebox {
     min-width: 250px;
     width: 450px;
