@@ -255,10 +255,6 @@ body {
 // Enrolment options page
 
 .generalbox {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: unset;
-  
   .coursebox {
     min-width: 250px;
     width: 450px;
@@ -324,6 +320,13 @@ body {
   .coursebox:hover {
     box-shadow: 0px 0px 10px 3px rgba(15, 110, 254, 0.5);
   }
+}
+
+.box.py-3.generalbox.info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: unset;
 }
 
 // Category list of courses
