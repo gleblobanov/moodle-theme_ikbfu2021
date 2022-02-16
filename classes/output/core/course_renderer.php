@@ -103,6 +103,9 @@ class course_renderer extends \core_course_renderer {
                     $content .= html_writer::end_tag('div');
                     $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
                         $content .= self::get_course_authors($course->id);
+                        //Icon for invisible courses
+                        $content .= html_writer::start_tag('i', array('class' => $course->visible ? '' : 'icon fa fa-eye-slash fa-fw'));
+                        $content .= html_writer::end_tag('i');
                     $content .= html_writer::end_tag('div');
                     
                     $content .= html_writer::start_tag('div', array('class' => 'ikbfu2021-row')); 
