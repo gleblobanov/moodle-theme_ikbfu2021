@@ -126,21 +126,24 @@
                 </div>
             {{/error}}
 
-            <div class="row justify-content-md-center d-flex">
+            
                 
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
-                </li>
-                            </ul>
-            <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Вход для зарегистрированных пользователей</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Вход с использование СЦОС</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Вход для гостей</button>
+                    </li>
+                </ul>
+
+            <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                
+                <div class="row justify-content-md-center d-flex">
                 <div class="col-md-5">
                     <form class="mt-3" action="{{loginurl}}" method="post" id="login">
                         <input id="anchor" type="hidden" name="anchor" value="">
@@ -188,15 +191,17 @@
                         {{#str}} cookiesenabled {{/str}}
                         {{{cookieshelpiconformatted}}}
                     </div>
-                    
-
-                
+                </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                 {{#hasidentityproviders}}
+                    <h3>Тут какой-нибудь текст, предупреждающий о всех карах входа через СЦОС</h3>
+                    <div class="row justify-content-md-center d-flex">
+                    <div class="potentialidplist mt-3 col-md-5">
                     <h2 class="h6 mt-2">{{#str}} potentialidps, auth {{/str}}</h2>
-                    <div class="potentialidplist mt-3">
+                    
                         {{#identityproviders}}
                             <div class="potentialidp">
                                 <a href="{{url}}" title={{#quote}}{{name}}{{/quote}} class="btn btn-secondary btn-block">
@@ -208,12 +213,16 @@
                             </div>
                         {{/identityproviders}}
                     </div>
+
+                    
+                    </div>
                 {{/hasidentityproviders}}
             </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
             
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="row justify-content-md-center d-flex">
                     {{#canloginasguest}}
-                        <div class="mt-2">
+                        <div class="mt-2 col-md-5">
                             <p>{{#str}}someallowguest{{/str}}</p>
                             <form action="{{loginurl}}" method="post" id="guestlogin">
                                 <input type="hidden" name="logintoken" value="{{logintoken}}">
@@ -223,10 +232,10 @@
                             </form>
                         </div>
                     {{/canloginasguest}}
-            
+                </div>
             
             </div>
-            </div>
+            
                 
                 
                 
